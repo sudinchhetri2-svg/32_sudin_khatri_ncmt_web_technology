@@ -1,0 +1,106 @@
+CHAPTER 1: AN OVERVIEW OF THE INTERNET AND THE WEB
+
+                                   Group A: Short Questions (2 Marks)
+
+1. Define the term "Protocol" in the context of the Internet.
+A protocol is a set of rules that computers follow to communicate with each other over a network. It ensures that data is sent, received, and understood correctly. Example: HTTP is used for web pages.
+
+2. What is the primary difference between a Web Browser and a Search Engine?
+A web browser is software (like Chrome or Firefox) used to access and view websites. A search engine (like Google) is a website that helps you find information on the internet by searching through web pages.
+
+3. Define the World Wide Web (WWW).
+The World Wide Web (WWW) is a system of linked documents (web pages) that are accessed over the internet using a web browser. It uses HTTP to transfer information.
+
+4. Distinguish between a static web page and a dynamic web page.
+
+· Static web page: Shows the same content to everyone, written in HTML, and does not change unless edited manually.
+· Dynamic web page: Content can change based on user interaction, time, or database input (e.g., Facebook feed, weather site).
+
+
+                                      Group B: Long Questions (4 Marks)
+
+5. Explain the client-server architecture of the web with a neat diagram.
+In the client-server model:
+
+· The client (e.g., your laptop or phone) requests data or services.
+· The server (a powerful computer) provides the requested data or service.
+· Example: You type www.youtube.com (client), YouTube’s server sends the webpage to you.
+
+(Imagine a diagram with a user on the left labeled “Client” and a computer on the right labeled “Server”, connected by an arrow labeled “Request” from client to server and another arrow labeled “Response” from server to client.)
+
+6. Describe the functions of the following Internet services: Email, FTP, and VoIP.
+
+· Email: Sends and receives digital messages over the internet.
+· FTP (File Transfer Protocol): Used to upload or download files between computers on a network.
+· VoIP (Voice over Internet Protocol): Allows voice calls over the internet instead of phone lines (e.g., WhatsApp calls, Skype).
+
+7. "The Internet is a network of networks." Elaborate on this statement explaining how packet switching works.
+The internet connects many smaller networks (like your home Wi-Fi, college network, ISP network) into one global network.
+Packet switching is how data travels:
+
+· Data is broken into small packets.
+· Each packet travels independently through different routes.
+· Packets are reassembled at the destination.
+· This makes communication efficient and reliable.
+
+
+                            Group C: Scenario-Based Questions (5 Marks)
+
+8. A startup wants a low-maintenance website with the same info for all visitors. They are advised to use a dynamic website. As a consultant, would you agree? Justify your answer.
+
+Answer:
+No, I would not agree. A static website is more suitable for their needs, and here’s why:
+
+· Cost-Effective: Static websites are cheaper to develop and host because they don’t require server-side processing or a database.
+· Low Maintenance: Once published, static sites don’t need regular updates unless the content changes, reducing ongoing technical costs.
+· Faster Loading: Without server-side processing, static pages load quickly, improving user experience.
+· Security: Static sites are less vulnerable to hacking because there’s no database or server-side code to exploit.
+· Scalability: They handle high traffic well since the server just sends pre-built files.
+· No Need for Dynamic Features: Since the startup only needs to display fixed information, dynamic features like user logins, real-time updates, or personalization are unnecessary.
+
+Additional Justification Against Dynamic Websites:
+Dynamic websites require more resources, regular updates, and security patches. They are ideal for e-commerce, social media, or portals where content changes frequently based on user interaction—which is not the case here.
+
+9. A user types www.google.com and gets "Server Not Found", but 142.250.190.46 works. Diagnose the problem and explain the underlying technology that failed.
+
+Answer:
+The issue is a DNS (Domain Name System) failure.
+
+· Diagnosis:
+  · The browser can’t resolve www.google.com to its IP address (142.250.190.46).
+  · Since accessing the site via the IP address works, the server is online and reachable.
+  · Therefore, the problem lies in translating the domain name to an IP address.
+· Technology That Failed – DNS:
+  · DNS acts like a phonebook for the internet, converting human-readable domain names into IP addresses.
+  · If DNS fails, the browser cannot locate the server using the domain name.
+· Possible Causes:
+  · Local DNS Cache Corruption: Stored DNS data on the computer may be outdated or corrupted.
+  · DNS Server Issues: The ISP’s or configured DNS server may be down or slow.
+  · Network Configuration: Incorrect DNS settings in the router or device.
+  · Firewall or Security Software: Blocking DNS requests.
+· Solutions:
+  · Flush the DNS cache (ipconfig /flushdns on Windows).
+  · Change DNS servers to public ones like Google DNS (8.8.8.8).
+  · Restart the router and modem.
+
+10. A multinational corporation wants to share sensitive inventory data with suppliers but not the public. Explain which network type (Intranet, Extranet, or Internet) they should implement and why.
+
+Answer:
+They should implement an Extranet.
+
+Why an Extranet is Ideal:
+
+· Secure External Access: An extranet allows controlled, secure access to specific external partners (like suppliers) without exposing data to the public internet.
+· Enhanced Security: It uses VPNs, firewalls, and authentication (like passwords or multi-factor authentication) to ensure only authorized users can enter.
+· Collaboration-Friendly: Suppliers can view real-time inventory data, place orders, and collaborate without needing physical meetings or insecure communication channels.
+· Cost-Effective: Uses existing internet infrastructure but adds security layers, avoiding the need for expensive private lines.
+· Audit and Control: Access logs and permissions can be tracked and managed, ensuring compliance and security.
+
+Why Not an Intranet or the Internet?
+
+· Intranet: Only accessible to internal employees, not external suppliers.
+· Internet: Fully public and insecure—unsuitable for sensitive data.
+· Extranet bridges the gap between internal privacy and external collaboration.
+
+Additional Consideration:
+The corporation should also use encryption (SSL/TLS) for data in transit and implement role-based access control (RBAC) to limit what each supplier can see or do within the extranet.
