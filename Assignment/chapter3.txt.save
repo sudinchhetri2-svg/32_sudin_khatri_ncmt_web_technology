@@ -1,3 +1,9 @@
+portfolio image added code
+
+
+
+
+
 Chapter 3 Website Structure Design
 
 
@@ -225,7 +231,11 @@ Breakdown of the Improved URL:
 Additional Best Practices for Implementation:
 
 · Canonical Tags: Ensure all parameter variations (?id=55) redirect or canonicalize to the clean slug URL.
+<<<<<<< HEAD
 · Redirects: Implement 301 redirects from old URLs to new ones to preserve SEO "equity and user bookmarks.
+=======
+· Redirects: Implement 301 redirects from old URLs to new ones to preserve SEO equity and user bookmarks.
+>>>>>>> 1f815c7 (update)
 · Consistency: Apply the same logic to categories, subcategories, and static pages (e.g., /about-us, /contact).
 
 This structure benefits users (clear, trustworthy, shareable) and SEO (keyword-rich, crawlable, non-duplicative), ultimately driving higher engagement and better search rankings.

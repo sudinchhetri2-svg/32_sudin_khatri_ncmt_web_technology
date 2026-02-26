@@ -4,7 +4,259 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sudin Khatri | Portfolio</title>
+
   <link rel="stylesheet" href="index.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #0f172a;
+      color: #f8fafc;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(15, 23, 42, 0.95);
+      padding: 15px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    header h1 {
+      color: #38bdf8;
+      font-size: 1.6rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav a {
+      color: #f8fafc;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #38bdf8;
+    }
+
+    .menu-btn {
+      display: none;
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    .hero {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 25px;
+      text-align: center;
+    }
+
+    .profile-pic {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center top;
+      border: 4px solid #38bdf8;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+      animation: fadeIn 1.3s ease forwards;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    .hero span {
+      color: #38bdf8;
+    }
+
+    .hero p {
+      margin-top: 10px;
+      font-size: 1.2rem;
+      opacity: 0;
+      animation: fadeIn 2s ease forwards;
+      animation-delay: 0.5s;
+    }
+
+    section {
+      padding: 100px 50px;
+    }
+
+    h3 {
+      font-size: 2.3rem;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .about {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: 1s;
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    .about.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .skills {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .skill {
+      margin-bottom: 20px;
+    }
+
+    .skill span {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+
+    .bar {
+      height: 10px;
+      background: #334155;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+    .bar div {
+      height: 100%;
+      width: 0;
+      background: #38bdf8;
+      transition: width 1.5s ease;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #1e293b;
+      padding: 25px;
+      border-radius: 10px;
+      text-align: center;
+      font-size: 1.1rem;
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-decoration: none;
+      color: #f8fafc;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    }
+
+    .contact {
+      text-align: center;
+      font-size: 1.1rem;
+    }
+
+    .contact a {
+      display: inline-block;
+      margin-top: 10px;
+      color: #38bdf8;
+      text-decoration: none;
+      font-size: 1.2rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #020617;
+      font-size: 0.9rem;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      header {
+        padding: 15px 20px;
+      }
+
+      nav ul {
+        position: absolute;
+        top: 70px;
+        right: -100%;
+        flex-direction: column;
+        background: #020617;
+        width: 200px;
+        padding: 20px;
+        transition: 0.4s;
+      }
+
+      nav ul.show {
+        right: 0;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .hero h2 {
+        font-size: 2.2rem;
+      }
+
+      section {
+        padding: 80px 20px;
+      }
+    }
+
+    @media (min-width: 900px) {
+      .hero-content {
+        flex-direction: row;
+        gap: 50px;
+        text-align: left;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -25,7 +277,7 @@
 
 <section class="hero" id="home">
   <div class="hero-content">
-    <img src="images/profile.jpg" alt="Sudin Khatri" class="profile-pic">
+    <img src="./Image/img.jpg" alt="Sudin Khatri" class="profile-pic">
     <div>
       <h2>Hi, I'm <span>Sudin Khatri</span></h2>
       <p>Web Developer & UI Designer</p>
@@ -37,7 +289,7 @@
   <h3>About Me</h3>
   <div class="about">
     <p>
-      I’m a passionate web developer who builds modern, responsive, and animated websites using HTML, CSS, and JavaScript.
+      I'm Sudin Khatri, a passionate web developer who loves building modern, responsive, and animated websites. I focus on creating clean user interfaces and smooth user experiences using HTML, CSS, and JavaScript.
     </p>
   </div>
 </section>
@@ -63,11 +315,11 @@
 <section id="projects">
   <h3>Projects</h3>
   <div class="projects">
-    <a href="#" class="card">Portfolio Website</a>
-    <a href="calculator/index.html" target="_blank" class="card">
-      Calculator App
+    <a href="#" class="card">Personal Portfolio Website</a>
+    <a href="calculator/index.html" class="card" target="_blank">
+      Calculator App (HTML, CSS, JS)
     </a>
-    <a href="#" class="card">Animated UI</a>
+    <a href="#" class="card">Animated Web UI</a>
   </div>
 </section>
 
@@ -75,7 +327,9 @@
   <h3>Contact Me</h3>
   <div class="contact">
     <p>Email me at</p>
-    <a href="mailto:sudinchhetri2@gmail.com">sudinchhetri2@gmail.com</a>
+    <a href="mailto:sudinchhetri2@gmail.com">
+      sudinchhetri2@gmail.com
+    </a>
   </div>
 </section>
 
@@ -83,6 +337,28 @@
   © 2026 | Sudin Khatri — All Rights Reserved
 </footer>
 
-<script src="index.js"></script>
+<script>
+  function toggleMenu() {
+    document.getElementById("menu").classList.toggle("show");
+  }
+
+  const about = document.querySelector(".about");
+  const skillBars = document.querySelectorAll(".bar div");
+
+  window.addEventListener("scroll", () => {
+    const trigger = window.innerHeight * 0.85;
+
+    if (about.getBoundingClientRect().top < trigger) {
+      about.classList.add("show");
+    }
+
+    skillBars.forEach(bar => {
+      if (bar.getBoundingClientRect().top < trigger) {
+        bar.style.width = bar.dataset.width;
+      }
+    });
+  });
+</script>
+
 </body>
 </html>
